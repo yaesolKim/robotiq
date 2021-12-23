@@ -20,13 +20,13 @@ def mainLoop(address):
     # We connect to the address received as an argument
     gripper.client.connectToDevice(address)
 
-    rospy.init_node('robotiq3FGripper')
+    rospy.init_node("robotiq3FGripper")
 
     # The Gripper status is published on the topic named 'Robotiq3FGripperRobotInput'
-    pub = rospy.Publisher('Robotiq3FGripperRobotInput', Robotiq3FGripperRobotInput, queue_size=1)
+    pub = rospy.Publisher("Robotiq3FGripperRobotInput", Robotiq3FGripperRobotInput, queue_size=1)
 
     # The Gripper command is received from the topic named 'Robotiq3FGripperRobotOutput'
-    rospy.Subscriber('Robotiq3FGripperRobotOutput', Robotiq3FGripperRobotOutput, gripper.refreshCommand)
+    rospy.Subscriber("Robotiq3FGripperRobotOutput", Robotiq3FGripperRobotOutput, gripper.refreshCommand)
 
     # We loop
     while not rospy.is_shutdown():

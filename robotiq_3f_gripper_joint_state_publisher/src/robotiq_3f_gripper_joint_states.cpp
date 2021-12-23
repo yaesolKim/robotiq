@@ -178,22 +178,27 @@ inline std::vector<std::string>  Robotiq3::jointNames() {
  * Main method.
  */
 int main(int argc, char *argv[]) {
+
+  //std::string gripper_prefix(argv[1]);
+  //std::string node_name = "robotiq_3f_gripper_joint_states";
   // ROS init, nodehandle, and rate
   ros::init(argc, argv, "robotiq_3f_gripper_joint_states");
+  //ros::init(argc, argv, node_name);
+  //ros::NodeHandle nh(gripper_prefix);
   ros::NodeHandle nh;
   ros::NodeHandle pnh("~");
   ros::Rate loop_rate(20);  // Hz
 
   // set user-specified prefix
-  /*
+
   std::string gripper_prefix;
   pnh.param<std::string>("prefix", gripper_prefix, "");
-  */
 
-  std::string gripper_prefix(argv[1]);
+
+  //------------std::string gripper_prefix(argv[1]);
   //pnh.param<std::string>("prefix", gripper_prefix, ""); //?what is this?
  // std::cout << argv[1] << std::endl;
-  std::cout << gripper_prefix << std::endl;
+  //std::cout << gripper_prefix << std::endl;
 
   // Create Robotiq3
   Robotiq3 robotiq(gripper_prefix);

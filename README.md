@@ -10,7 +10,8 @@ This repository provides our customized ros package for simultaneous use of two 
 
 ## Usage
 ### Simulation
-Currently, simulation can only run in a [dual_ur_robotiq](https://github.com/yaesolKim/dual_ur_robotiq) library integrated with UR5e.
+Currently, simulation can only run in a [dual_ur_robotiq](https://github.com/yaesolKim/dual_ur_robotiq) library integrated with UR5e.       
+We plan to produce an independent source capable of simulating two grippers simultaneously.
 
 ### Actual gripper execution: Bring up grippers and robots, Run moveit and Rviz   
 Run the lines below in the respective terminals.

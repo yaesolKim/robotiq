@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   socketcan_interface
   std_srvs
   robotiq_3f_gripper_articulated_msgs
+  message_generation
 )
 
 find_package(PkgConfig)

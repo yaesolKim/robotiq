@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <group ns="left_hand">
+    <node pkg="robotiq_3f_gripper_joint_state_publisher" type="robotiq_3f_gripper_joint_states" name="robotiq_3f_gripper_joint_state"/>
+  </group>
+
+  <group ns="right_hand">
+    <node pkg="robotiq_3f_gripper_joint_state_publisher" type="robotiq_3f_gripper_joint_states" name="robotiq_3f_gripper_joint_state"/>
+  </group>
+
+
+</launch>
+

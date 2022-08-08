@@ -16,6 +16,12 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(PkgConfig)
 
+add_message_files(
+  FILES
+  Robotiq3FGripper_robot_input.msg
+  Robotiq3FGripper_robot_output.msg
+)
+
 catkin_python_setup()
 
 generate_dynamic_reconfigure_options(
@@ -53,6 +59,7 @@ target_link_libraries(${PROJECT_NAME}
 )
 add_dependencies(${PROJECT_NAME}
   ${PROJECT_NAME}_gencfg
+  ${PROJECT_NAME}_generate_messages_cpp
   ${catkin_EXPORTED_TARGETS}
 )
 

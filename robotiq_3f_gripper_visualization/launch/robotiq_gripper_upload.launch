@@ -1,4 +1,27 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
+
+<launch>
+
+  <group ns="left_hand">
+    <param name="robot_description" command="$(find xacro)/xacro  --inorder  '$(find robotiq_3f_gripper_visualization)/cfg/robotiq-3f-gripper_articulated.xacro'" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robotiq_3f_gripper_visualization)/cfg/visualize.rviz" required="true" />
+  </group>
+
+  <group ns="right_hand">
+    <param name="robot_description" command="$(find xacro)/xacro  --inorder  '$(find robotiq_3f_gripper_visualization)/cfg/robotiq-3f-gripper_articulated.xacro'" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robotiq_3f_gripper_visualization)/cfg/visualize.rviz" required="true" />
+  </group>
+
+</launch>
+
+ <!--
+
+ <?xml version="1.0"?>
 <launch>
    <param name="robot_description" command="$(find xacro)/xacro.py '$(find robotiq_3f_gripper_visualization)/cfg/robotiq-3f-gripper_articulated.xacro'" />
  </launch>
+
+
+ -->
